@@ -17,10 +17,14 @@
            <li><a href="/">Home</a></li>
            <li><a href="#">About</a></li>
            <li><a href="#">Contact</a></li>
-           <li><a href="{% url 'register' %}">Register</a></li>
-           <li><a href="{% url 'login' %}">Log In</a></li>
+           {% if request.user.is_authenticated %}
            <li><a href="{% url 'logout' %}">Log Out</a></li>
+           {% else %}
+           <li><a href="{% url 'login' %}">Log In</a></li>
+           <li><a href="{% url 'register' %}">Register</a></li>
+           {% endif %}
        </ul>
+
        <h1><span class="fui-settings-16 muted">Our Simple Site</span></h1>
    </div>
    <hr>

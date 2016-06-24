@@ -2,5 +2,5 @@
 {% block content %}
     <h2> Success! </h2>
     <p> You are logged in as {{ user.email }}</p>
-    <p></p>
+    <p> Your last login was on: {{ user.last_login }}</p>
 {% endblock %}
