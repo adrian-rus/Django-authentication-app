@@ -123,6 +123,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS =(
+    os.path.join(BASE_DIR, "static"),
+)
 
 AUTH_USER_MODEL = 'accounts.User'
 
@@ -130,3 +133,6 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'accounts.backends.EmailAuth',
 )
+
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', '<put in your own stripe key>')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET', '<<put in your own stripe key>')
