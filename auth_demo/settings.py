@@ -135,4 +135,4 @@ AUTHENTICATION_BACKENDS = (
 )
 
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', '<put in your own stripe key>')
-STRIPE_SECRET = os.getenv('STRIPE_SECRET', '<<put in your own stripe key>')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET', '<put in your own stripe key>')

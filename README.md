@@ -13,8 +13,18 @@ Lesson Challenges completed on 24/06/2016
 - Show only login and register links if an user is not logged in and show only Logout link if a user is logged in
 - Show the users last_login in the profile page
 
-Stripe unique payment added 25/6/16
+Stripe unique payment added 25/06/2016
 - Added Stripe env in settings.py
-- Created registration age that ask for a payment through Stripe
+- Created registration page that ask for a payment through Stripe
+
+Stripe subscription added 26/06/2016
+- Added Stripe subscription plan
+- Setting a monthly payment plan
+- How to cancel a payment plan
+- Renew a subcription
+- Use webhooks to link different web services
+- Use CURL to renew a subscription
+
+
 
 

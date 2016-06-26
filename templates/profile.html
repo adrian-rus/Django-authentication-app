@@ -3,4 +3,20 @@
     <h2> Success! </h2>
     <p> You are logged in as {{ user.email }}</p>
     <p> Your last login was on: {{ user.last_login }}</p>
+    <p> Your Stripe id is {{ user.stripe_id }}</p>
+    <h2> Subscription details:</h2>
+    <p>You have {{ user.subscription_end|timeuntil }} left on your subscription.</p>
+    <p>
+    <a href="{% url 'cancel_subscription' %}"
+       onclick="return cancelSubscriptionCheck();"
+       class="btn btn-danger">Cancel Subscription</a>
+    </p>
+    <script type="text/javascript">
+        function cancelSubscriptionCheck() {
+            if (confirm('Are you sure you want to cancel?')){
+                return True;
+            }
+            return False;
+        }
+    </script>
 {% endblock %}
